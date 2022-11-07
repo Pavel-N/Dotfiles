@@ -1,0 +1,148 @@
+#  ██████╗ ██╗    ██╗    ██████╗ ██╗██╗   ██╗██╗███╗   ██╗ ██████╗ 
+#  ██╔══██╗██║    ██║    ██╔══██╗██║██║   ██║██║████╗  ██║██╔════╝ 
+#  ██████╔╝██║ █╗ ██║    ██║  ██║██║██║   ██║██║██╔██╗ ██║██║  ███╗
+#  ██╔══██╗██║███╗██║    ██║  ██║██║╚██╗ ██╔╝██║██║╚██╗██║██║   ██║
+#  ██████╔╝╚███╔███╔╝    ██████╔╝██║ ╚████╔╝ ██║██║ ╚████║╚██████╔╝
+#  ╚═════╝  ╚══╝╚══╝     ╚═════╝ ╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+# Author: Pavel Novák
+# Github: https://github.com/Pavel-N
+# Description: My simple X hotkey daemon setup, unnecesary key bindings are removed.
+
+
+; +=================================\
+; |    Reload this configuration    |
+; +=================================/
+; |
+; |
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+; +======================\
+; |    Start Programs    |
+; +======================/
+; |
+; |
+# Open terminal
+super + Return
+	alacritty
+	
+# Show program launcher
+super + @space
+	rofi -show drun -modi drun
+
+# Open file explorer
+super + e
+	thunar
+
+# Flameshot
+Print
+	flameshot gui
+	
+# Obsidian
+super + o
+	obsidian
+	
+# LibreWolf
+super + b
+	librewolf
+
+; +================\
+; |    Controls    |
+; +================/
+; |
+; |
+# Volume
+XF86AudioRaiseVolume
+	amixer -q sset Master,0 5%+ unmute
+XF86AudioLowerVolume
+	amixer -q sset Master,0 5%- unmute
+XF86AudioMute
+	amixer -q sset Master,0 0%
+	
+# Backlight
+XF86MonBrightnessUp
+	light -A 5
+XF86MonBrightnessDown
+	light -U 5
+
+
+; +=====================\
+; |    BSPWM Hotkeys    |
+; +=====================/
+; |
+; |
+# Quit/Restart bspwm
+super + shift + {x,r}
+	bspc {quit,wm -r}
+
+# Close current window
+super + shift + q
+	bspc node -c
+
+# Alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# Swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# Set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+
+# ===== Focus =====
+
+# Focus the node in the given direction
+super + {_,shift + }{h, j, k, l}
+	bspc node -{f,s} {west, south, north, east}
+super + {_,shift + }{Left, Down, Up, Right}
+	bspc node -{f,s} {west, south, north, east}
+
+# Focus the last node/desktop
+alt + {semicolon,Tab}
+	bspc {node,desktop} -f last
+
+# Focus or send to the given desktop
+super + {_, shift}{plus, ecaron, scaron, ccaron, rcaron, zcaron, yacute, aacute, iacute, eacute}
+	bspc {desktop -f,node -d} '^{1-9}'
+# Fix "+" becoming "1" when shift is used
+super + shift + plus
+	bspc node -d '^1'
+
+# Focus the next/previous desktop in the current monitor
+super + control + {comma, period}
+	bspc desktop -f {prev,next}.local
+
+
+# ===== Preselect =====
+
+# Preselect the window direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# Preselect the window ratio
+super + ctrl + {plus, ecaron, scaron, ccaron, rcaron, zcaron, yacute, aacute, iacute, eacute}
+	bspc node -o 0.{1-9}
+
+# Cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# Cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+
+# ===== Move / Resize =====
+
+# Expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
