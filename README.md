@@ -1,23 +1,19 @@
 # Dotfiles - BW Diving Theme
 ![Desktop preview](previews/preview.png)
 
+
 ## Table of Contents
-- [Requirements](#requirements)
-- [Optional](#optional)
+- [Required Fonts](#required-fonts)
 - [Polybar](#polybar)
 - [Alacritty](#alacritty)
 - [Pfetch](#pfetch)
 
+<br>
 
-## Requirements
-- Fonts
-    - Roboto Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-roboto-mono))
-    - DejaVuSans Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete))
-- [Polybar](https://github.com/polybar/polybar)
-- [Alacritty](https://github.com/alacritty/alacritty)
+## Required Fonts
+- Roboto Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-roboto-mono))
+- DejaVuSans Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete))
 
-## Optional
-- [pfetch](https://github.com/dylanaraps/pfetch)
 
 ## Polybar
 
@@ -30,7 +26,13 @@
 ### [Right part](polybar/right.ini)
 ![Polybar Center](previews/polybar_preview_right.png)
 
-## Alacritty 
+This part also uses the [`keyboard_backlight.sh`](polybar/keyboard_backlight.sh) script for getting keyboard backlight brightness, you propably want to change this line
+```bash
+PATH="/sys/devices/platform/asus-nb-wmi/leds/asus::kbd_backlight/brightness"
+```
+so the `PATH` points to proper file on your computer
+
+## Alacritty
 ![Alacritty preview](previews/alacritty.png)
 
 Main visual takeaways from my alacritty config is using 
