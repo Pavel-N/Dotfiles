@@ -1,8 +1,12 @@
 # ~/.config/alacritty/alacritty.yml
-# Pavel Novák
+# Author: Pavel Novák
+# Github: https://github.com/Pavel-N
+# Description: My alacritty setup.
+
 
 env:
   WINIT_X11_SCALE_FACTOR: "1.7"
+
 
 window:
     opacity: 0.4
@@ -12,19 +16,20 @@ window:
 
 
 key_bindings:
- - { key: Back, mods: Control, chars: "\x17" }  # Delete word on left - Ctrl + W
- - { key: Delete, mods: Control, chars: "\x1b\x64" } # Delete word on right - Alt + D:
+# Delete word on left - Ctrl + W
+ - { key: Back, mods: Control, chars: "\x17" }
+# Delete word on right - Alt + D
+ - { key: Delete, mods: Control, chars: "\x1b\x64" }
+# Change font size
  - { key: Minus, mods: Control, action: DecreaseFontSize }
  - { key: Plus, mods: Control, action: IncreaseFontSize }
  - { key: Key0, mods: Control|Shift, action: ResetFontSize }
-# i3 bindings
-# - { key: j, }
- - { key: J, mods: Control, chars: "\x1b[1;5D" } # Jump forward by a word 
- - { key: Semicolon, mods: Control, chars: "\x1b[1;5C" } # Jump backward by a word
+# HJKL bindings
+# Jump forward by a word
+ - { key: H, mods: Control|Shift, chars: "\x1b[1;5D" }
+# Jump backward by a word
+ - { key: L, mods: Control|Shift, chars: "\x1b[1;5C" }
 
-
-# selection:
-    # sematic_escape_chars: '",.:|()[]{}'  What does this do?
 
 font:
     normal:
@@ -54,9 +59,7 @@ cursor:
         shape: beam
 
 
-# Colors (IR Black)
 colors:
-    # Default colors
     primary:
         background: '#000000'
         foreground: '#ffffff'
@@ -65,7 +68,6 @@ colors:
         text: '#ffffff'
         cursor: '#ffffff'
 
-    # Normal colors
     normal:
         black:   '#4e4e4e'
         red:     '#ff6c60'
@@ -76,7 +78,6 @@ colors:
         cyan:    '#c6c5fe'
         white:   '#eeeeee'
 
-    # Bright colors
     bright:
         black:   '#7c7c7c'
         red:     '#ffb6b0'
@@ -86,4 +87,3 @@ colors:
         magenta: '#ff9cfe'
         cyan:    '#dfdff0'
         white:   '#ffffff'
-
