@@ -3,12 +3,17 @@
 
 
 ## Table of Contents
+- [TODO](#todo)
 - [Required Fonts](#required-fonts)
 - [Polybar](#polybar)
 - [Alacritty](#alacritty)
 - [Pfetch](#pfetch)
+- [Picom](#picom)
 
 <br>
+
+## TODO
+- Multiple monitor setup
 
 ## Required Fonts
 - Roboto Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-roboto-mono))
@@ -54,3 +59,8 @@ I use following setup for pfetch in my `.zshrc`:
 alias pfetch="PF_INFO=\"ascii os uptime pkgs memory shell editor wm\" pfetch"
 ```
 You could also use enviromental variables instead of `alias`, but for me this makes it easier to find and change.
+
+
+## Picom
+![Picom preview](previews/picom.mov)
+Im using [picom-animations](https://github.com/dccsillag/picom) ([AUR](https://aur.archlinux.org/packages/picom-animations-git)) fork of Picom from [Daniel Csillag](https://github.com/dccsillag/), which allows nice and smooth animations as well as many other features.
