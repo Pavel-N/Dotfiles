@@ -62,5 +62,6 @@ You could also use enviromental variables instead of `alias`, but for me this ma
 
 
 ## Picom
-![Picom preview](previews/picom.mov)
+https://user-images.githubusercontent.com/35466834/201079479-a5c2b372-3737-4e19-8c88-e29d9a24dc71.mov
+
 Im using [picom-animations](https://github.com/dccsillag/picom) ([AUR](https://aur.archlinux.org/packages/picom-animations-git)) fork of Picom from [Daniel Csillag](https://github.com/dccsillag/), which allows nice and smooth animations as well as many other features.
