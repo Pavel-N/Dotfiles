@@ -1,6 +1,5 @@
-# ⚫ ⚪ Dotfiles - BW Diving Theme ⚫ ⚪
 ![Desktop preview](previews/preview.png)
-
+# ⚫ ⚪ Dotfiles - BW Diving Theme ⚫ ⚪
 
 ## Table of Contents 📎
 - [TODO](#todo) ⭕
