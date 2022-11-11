@@ -1,26 +1,26 @@
-# Dotfiles - BW Diving Theme
+# ⚫ ⚪ Dotfiles - BW Diving Theme ⚫ ⚪
 ![Desktop preview](previews/preview.png)
 
 
-## Table of Contents
-- [TODO](#todo)
-- [Required Fonts](#required-fonts)
-- [Polybar](#polybar)
-- [Alacritty](#alacritty)
-- [Pfetch](#pfetch)
-- [Picom](#picom)
+## Table of Contents 📎
+- [TODO](#todo) ⭕
+- [Required Fonts](#required-fonts) 🗛
+- [Polybar](#polybar) 📊
+- [Alacritty](#alacritty) 🖵
+- [Pfetch](#pfetch) 🖼️
+- [Picom](#picom) ⚙️
 
 <br>
 
-## TODO
+## ⭕ TODO ⭕
 - Multiple monitor setup
 
-## Required Fonts
+## 🗛 Required Fonts 🗛
 - Roboto Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-roboto-mono))
 - DejaVuSans Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-dejavu-complete))
 
 
-## Polybar
+## 📊 Polybar 📊
 
 ### [Left part](polybar/left.ini)
 ![Polybar Left](previews/polybar_preview_left.png)
@@ -37,7 +37,7 @@ PATH="/sys/devices/platform/asus-nb-wmi/leds/asus::kbd_backlight/brightness"
 ```
 so the `PATH` points to proper file on your computer
 
-## Alacritty
+## 🖵 Alacritty 🖵
 ![Alacritty preview](previews/alacritty.png)
 
 Main visual takeaways from my alacritty config is using 
@@ -51,7 +51,7 @@ and
         y: 15
 ```
 
-## Pfetch
+## 🖼️ Pfetch 🖼️
 ![Pfetch preview](previews/pfetch.png)
 
 I use following setup for pfetch in my `.zshrc`:
@@ -61,7 +61,7 @@ alias pfetch="PF_INFO=\"ascii os uptime pkgs memory shell editor wm\" pfetch"
 You could also use enviromental variables instead of `alias`, but for me this makes it easier to find and change.
 
 
-## Picom
+## ⚙️ Picom ⚙️
 https://user-images.githubusercontent.com/35466834/201079479-a5c2b372-3737-4e19-8c88-e29d9a24dc71.mov
 
 Im using [picom-animations](https://github.com/dccsillag/picom) ([AUR](https://aur.archlinux.org/packages/picom-animations-git)) fork of Picom from [Daniel Csillag](https://github.com/dccsillag/), which allows nice and smooth animations as well as many other features.
