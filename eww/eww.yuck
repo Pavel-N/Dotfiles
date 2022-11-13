@@ -1,0 +1,24 @@
+(defpoll lang :interval "1s"
+    `xprop -root _XKB_RULES_NAMES | awk -F " " '{ s=substr($5, 2, 2); print s }'`)
+
+(defwidget locale-list []
+    (box :class "both"
+         :halign "baseline" 
+         :valign "baseline"
+        (box :class {lang == "cz" ? "active" : "inactive" } "CZ")
+        (box :class {lang == "us" ? "active" : "inactive" } "US")))
+
+(defwindow locale-select
+    	:monitor 0
+        :geometry (geometry :width "12%"
+                            :height "8%"
+                            :anchor "center")
+        :stacking "fg"
+        :windowtype "dialog"
+        :wm-ignore false
+    (box :orientation "vertical" 
+         :valign "baseline"
+        (box :class "text" 
+            "Keyboard layout:")
+        (locale-list)))
+

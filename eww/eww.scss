@@ -1,0 +1,21 @@
+* {
+    font-family: "Roboto Mono Nerd Font";
+}
+
+.text {
+    background-color: #181A1E;
+    font-size: 20px; 
+    color: #C5C8C6;
+}
+
+.active {
+    color: #181A1E;
+    background-color: #C5C8C6;
+    font-size: 30px;
+}
+
+.inactive {
+    color: #C5C8C6;
+    background-color: #181A1E;
+    font-size: 20px;
+}

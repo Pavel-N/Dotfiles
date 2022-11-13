@@ -47,6 +47,10 @@ super + o
 super + b
 	librewolf
 
+# Change keyboard layout
+super + shift + @space
+	~/.config/Scripts/change_layout
+
 ; +================\
 ; |    Controls    |
 ; +================/

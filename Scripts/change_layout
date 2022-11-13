@@ -1,0 +1,15 @@
+#!/bin/bash
+
+lang=$(xprop -root _XKB_RULES_NAMES | awk -F " " '{ s=substr($5, 2, 2); print s }')
+
+if [ "$lang" == "cz" ]
+then
+    setxkbmap -layout us
+else
+    setxkbmap -layout cz
+fi
+
+eww open locale-select >> /dev/null
+sleep 1
+eww close locale-select
+
