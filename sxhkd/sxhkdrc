@@ -58,9 +58,9 @@ super + shift + @space
 ; |
 # Volume
 XF86AudioRaiseVolume
-	amixer -q sset Master,0 5%+ unmute
+	amixer -q sset Master,0 2%+ unmute
 XF86AudioLowerVolume
-	amixer -q sset Master,0 5%- unmute
+	amixer -q sset Master,0 2%- unmute
 XF86AudioMute
 	amixer -q sset Master,0 0%
 	
