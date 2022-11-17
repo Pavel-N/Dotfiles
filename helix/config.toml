@@ -1,0 +1,35 @@
+theme = "bw_diving_dracula"
+
+[editor]
+color-modes = true
+scroll-lines = 1
+shell = ["zsh", "c"]
+line-number = "relative"
+auto-completion = true
+auto-format = false
+auto-save = true
+idle-timeout = 0
+rulers = [80, 100, 120]
+bufferline = "multiple"
+cursorline = true
+
+[editor.indent-guides]
+render = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "underline"
+select = "block"
+
+[editor.statusline]
+left = ["mode", "position"]
+center = ["file-type", "separator", "file-name", "separator", "total-line-numbers"]
+right = ["diagnostics", "workspace-diagnostics"]
+
+[keys.normal]
+"ů" = "command_mode"  # Handy when using czech keyboard
+# C-o = "file_picker"
+# C-s = ":w"
+C-b = ":sh cargo run"
+
+[keys.insert]
