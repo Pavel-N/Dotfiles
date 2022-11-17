@@ -25,7 +25,7 @@ while pgrep -x picom >/dev/null; do sleep 1; done
 picom --experimental-backend -b
 
 # Start Polybar
-~/.config/polybar/launch_polybar_leftwm
+~/.config/polybar/launch_polybar
 
 # ===== BSPWM Config =====
 # Monitor
