@@ -12,7 +12,7 @@
 <br>
 
 ## ⭕ TODO ⭕
-- Multiple monitor setup
+- Improve multi-monitor setup
 
 ## 🗛 Required Fonts 🗛
 - Roboto Mono Nerd Font ([AUR](https://aur.archlinux.org/packages/nerd-fonts-roboto-mono))
@@ -20,6 +20,8 @@
 
 
 ## 📊 Polybar 📊
+
+Note that every bar uses "MONITOR" enviroment variable to support the multi-monitor functionality.
 
 ### [Left part](polybar/left.ini)
 ![Polybar Left](previews/polybar_preview_left.png)
@@ -64,3 +66,7 @@ You could also use enviromental variables instead of `alias`, but for me this ma
 https://user-images.githubusercontent.com/35466834/201079479-a5c2b372-3737-4e19-8c88-e29d9a24dc71.mov
 
 Im using [picom-animations](https://github.com/dccsillag/picom) ([AUR](https://aur.archlinux.org/packages/picom-animations-git)) fork of Picom from [Daniel Csillag](https://github.com/dccsillag/), which allows nice and smooth animations as well as many other features.
+
+
+## 🖽 BSPWM 🖽
+Note that you need to change names of the monitors in `bspwmrc` to the ones you are using!
