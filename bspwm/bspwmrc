@@ -14,7 +14,7 @@
 xsetroot -cursor_name left_ptr
 
 # Set the wallpaper
-feh --bg-fill Pictures/Wallpapers/diving_taliacohen.jpg
+feh --bg-fill ~/Pictures/Wallpapers/diving_taliacohen.jpg
 
 # Start xchkd
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -28,8 +28,18 @@ picom --experimental-backend -b
 ~/.config/polybar/launch_polybar
 
 # ===== BSPWM Config =====
-# Monitor
-bspc monitor -d 1 2 3 4 5 6 7 8 9            # Desktop names
+# Monitor(s)
+is_external=$(xrandr --query | grep 'HDMI2')
+if [[ $is_external != *disconnected* ]]  # Detect second monitor(s)
+then
+  ~/.config/.screenlayout/both.sh
+  bspc monitor eDP1 -d 6 7 8 9 0
+  bspc monitor HDMI2 -d 1 2 3 4 5
+else
+  ~/.config/.screenlayout/laptop_only.sh
+  bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9            
+fi
+bspc config remove_unplugged_monitors true
 # Basics
 bspc config top_padding           40         # Top padding for polybar
 # Border

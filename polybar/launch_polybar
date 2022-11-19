@@ -10,9 +10,9 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Start new polybar instance on every connected monitor
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --config=~/.config/polybar/left.ini --reload left &
-    polybar --config=~/.config/polybar/center.ini --reload center &
-    polybar --config=~/.config/polybar/right.ini --reload right &
+    MONITOR=$m polybar --config=~/.config/polybar/left.ini --reload left & 
+    MONITOR=$m polybar --config=~/.config/polybar/center.ini --reload center &
+    MONITOR=$m polybar --config=~/.config/polybar/right.ini --reload right &
   done
 fi
 
