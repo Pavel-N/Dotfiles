@@ -1,0 +1,60 @@
+.findex-window {
+	background: transparent;
+}
+
+.findex-container {
+	background: rgba(33, 33, 33, 1);
+	padding: 5px;
+}
+
+.findex-query {
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 25px;
+}
+
+.findex-results-scroll {
+	margin-top: 10px;
+}
+
+.findex-results {
+	border-radius: 5px;
+}
+
+.findex-result-row {
+	padding: 5px 2px 5px;
+	border-bottom: 1px solid rgba(144, 144, 144, 0.2);
+  border-radius: 5px;
+}
+
+.findex-result-app-name {
+	font-size: 20px;
+	font-weight: 600;
+  color: rgb(180, 180, 180);
+}
+
+.findex-result-app-description, .findex-result-app-command {
+	color: rgba(255, 255, 255, 0.4);
+  font-size: 0px;
+}
+
+.findex-result-app-command {
+	font-style: italic;
+  font-size: 0px;
+}
+
+.findex-result-row box:last-child {
+	margin-left: 10px;
+}
+
+.findex-results:first-child {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.findex-results:last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom: 1px solid transparent;
+}

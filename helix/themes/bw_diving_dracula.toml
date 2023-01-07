@@ -46,8 +46,8 @@
 "ui.cursorline.primary" = { bg = "cursorprim" }
 "ui.cursorline.secondary" = { bg = "cursorsec" }
 
-"error" = { fg = "red" }
 "warning" = { fg = "cyan" }
+"diagnostic.error" = { underline = { style = "curl", color = "red" } }
 
 "markup.heading" = { fg = "purple", modifiers = ["bold"] }
 "markup.list" = "cyan"

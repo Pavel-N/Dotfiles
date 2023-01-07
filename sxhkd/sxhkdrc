@@ -27,10 +27,6 @@ super + Escape
 super + Return
 	alacritty
 	
-# Show program launcher
-super + @space
-	rofi -show drun -modi drun
-
 # Open file explorer
 super + e
 	thunar
