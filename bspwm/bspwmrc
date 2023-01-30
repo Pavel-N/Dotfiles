@@ -37,13 +37,20 @@ fi
 bspc config remove_unplugged_monitors true
 
 # Start Polybar
+sleep 1
 ~/.config/polybar/launch_polybar
 
 # Start Findex
 findex-daemon
 
+# Start pkexec daemon
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # Set the wallpaper - after monitor setup
 feh --bg-fill ~/Pictures/Wallpapers/diving_taliacohen.jpg
+
+# Set backlight to 80%
+light -S 80
 
 # Basics
 bspc config top_padding           40         # Top padding for polybar

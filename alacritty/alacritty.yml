@@ -29,6 +29,8 @@ key_bindings:
  - { key: H, mods: Control|Shift, chars: "\x1b[1;5D" }
 # Jump backward by a word
  - { key: L, mods: Control|Shift, chars: "\x1b[1;5C" }
+# fg keybind
+ - { key: F, mods: Control, chars: "fg\x0D" }
 
 
 font:

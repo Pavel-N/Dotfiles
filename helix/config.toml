@@ -2,8 +2,8 @@ theme = "bw_diving_dracula"
 
 [editor]
 color-modes = true
-scroll-lines = 1
-shell = ["zsh", "c"]
+scroll-lines = 3
+shell = ["zsh", "-c"]
 line-number = "relative"
 auto-completion = true
 auto-format = true
@@ -27,8 +27,9 @@ center = ["file-type", "separator", "file-name", "separator", "total-line-number
 right = ["diagnostics", "workspace-diagnostics"]
 
 [keys.normal]
-"ů" = "command_mode"  # Handy when using czech keyboard
-";" = "command_mode"
+# "ů" = "command_mode"  # Handy when using czech keyboard
+# ";" = "command_mode"
+backspace = "command_mode"
 # C-o = "file_picker"
 # C-s = ":w"
 C-b = ":sh cargo run"
