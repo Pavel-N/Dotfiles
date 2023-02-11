@@ -22,18 +22,24 @@ normal = "underline"
 select = "block"
 
 [editor.statusline]
-left = ["mode", "position"]
+left   = ["mode", "position"]
 center = ["file-type", "separator", "file-name", "separator", "total-line-numbers"]
-right = ["diagnostics", "workspace-diagnostics"]
+right  = ["diagnostics", "workspace-diagnostics"]
 
 [keys.normal]
-# "ů" = "command_mode"  # Handy when using czech keyboard
-# ";" = "command_mode"
 backspace = "command_mode"
-# C-o = "file_picker"
-# C-s = ":w"
-C-b = ":sh cargo run"
+# C-b = ":sh cargo run"
+
+# Handy when using czech keyboard:
+"ů"   = "collapse_selection"
+"A-ů" = "flip_selections"
 
 [keys.insert]
 # move line up
-"C-up" = ["extend_line", "delete_selection","move_line_up","open_above","paste_before"]
+"A-up"     = ["extend_line","yank","move_line_up","open_above","replace_with_yanked","move_line_down", "move_line_down", "extend_line", "delete_selection", "move_line_up", "move_line_up"]
+# move line down
+"A-down"   = ["extend_line","delete_selection", "paste_after", "move_line_down"]
+# duplicate line up
+"S-A-up"   = ["extend_line","yank","open_above","normal_mode","replace_with_yanked", "insert_mode"]
+# duplicate line down
+"S-A-down" = ["extend_line","yank","move_line_down","open_above","normal_mode","replace_with_yanked", "insert_mode"]
