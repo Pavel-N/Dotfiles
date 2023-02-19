@@ -66,6 +66,14 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	light -U 5
 
+# Lock
+XF86PowerOff
+	~/Programming/Rust/rlock_xcb/target/debug/rlock  
+
+# Sleep
+XF86Sleep
+	loginctl suspend && ~/Programming/Rust/rlock_xcb/target/debug/rlock 
+
 
 ; +=====================\
 ; |    BSPWM Hotkeys    |
@@ -92,6 +100,10 @@ super + g
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# Rotate windows
+super + {ctrl + r, r}
+	bspc node @focused:/ --rotate {-90, 90}
+
 
 # ===== Focus =====
 
@@ -102,7 +114,7 @@ super + {_,shift + }{Left, Down, Up, Right}
 	bspc node -{f,s} {west, south, north, east}
 
 # Focus the last node/desktop
-alt + {semicolon,Tab}
+{super, alt} + Tab
 	bspc {node,desktop} -f last
 
 # Focus or send to the given desktop
