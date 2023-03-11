@@ -9,9 +9,15 @@ auto-completion = true
 auto-format = true
 auto-save = false
 idle-timeout = 0
+completion-trigger-len = 1
 rulers = [80, 100, 120]
 bufferline = "always"
 cursorline = true
+#editor = true
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
 
 [editor.indent-guides]
 render = true
@@ -22,17 +28,21 @@ normal = "underline"
 select = "block"
 
 [editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 left   = ["mode", "position"]
 center = ["file-type", "separator", "file-name", "separator", "total-line-numbers"]
-right  = ["diagnostics", "workspace-diagnostics"]
+right  = ["diagnostics", "workspace-diagnostics", "spinner"]
 
 [keys.normal]
+# Backspace goes to command mode
 backspace = "command_mode"
-# C-b = ":sh cargo run"
-
+# Select word (inner) same as "miw" or "bw" 
+"A-w" = ["move_prev_word_start", "move_next_word_start"]
 # Handy when using czech keyboard:
 "ů"   = "collapse_selection"
-"A-ů" = "flip_selections"
+"A-ů" = "flip_selections"  # Doesn't work ??
 
 [keys.insert]
 # move line up

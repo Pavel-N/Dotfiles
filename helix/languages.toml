@@ -1,0 +1,15 @@
+indent = { tab-width = 4, unit = " " }
+
+
+[[language]]
+name = "x86asm"
+file-types = ["asm"]
+injection-regex = "^asm$"
+comment-token = ";"
+scope = "source.asm"
+indent = { tab-width = 4, unit = " " }
+roots = []
+
+[[grammar]]
+name = "x86asm"
+source = { git = "https://github.com/bearcove/tree-sitter-x86asm", rev = "ca72933e74ea3b3f995bc4b245f03328554f1e65" }

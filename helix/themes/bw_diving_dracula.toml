@@ -1,5 +1,7 @@
 # Author : Sam Sartor <me@samsartor.com>
 # A port of https://github.com/bceskavich/dracula-at-night
+# Modified by pavel Novák https://github.com/Pavel-N
+
 "comment" = { fg = "comment" }
 "constant" = { fg = "purple" }
 "constant.character.escape" = { fg = "pink" }
@@ -21,13 +23,12 @@
 "diff.minus" = { fg = "red" }
 
 "ui.background" = { fg = "foreground" }
-# "ui.cursor" = { fg = "background", bg = "orange", modifiers = ["dim"] }
 "ui.cursor.insert" = { fg = "green", bg = "green" }
 "ui.cursor.match" = { fg = "green", modifiers = ["underlined"] }
 "ui.cursor.primary" = { fg = "background", bg = "cyan", modifiers = ["dim"] }
 "ui.help" = { fg = "foreground", bg = "background_dark" }
 "ui.linenr" = { fg = "comment" }
-"ui.linenr.selected" = { fg = "foreground" }
+"ui.linenr.selected" = { fg = "purple" }
 "ui.menu" = { fg = "foreground", bg = "background_dark" }
 "ui.menu.selected" = { fg = "cyan", bg = "background_dark" }
 "ui.popup" = { fg = "foreground", bg = "background_dark" }
@@ -45,6 +46,14 @@
 "ui.window" = { fg = "foreground" }
 "ui.cursorline.primary" = { bg = "cursorprim" }
 "ui.cursorline.secondary" = { bg = "cursorsec" }
+
+# Inlay type hints
+"ui.virtual.inlay-hint" = { fg = "inlay" }
+
+# Bufferline
+"ui.bufferline" = { fg = "comment", bg = "background_dark" }
+"ui.bufferline.active" = { fg = "purple" }
+
 
 "warning" = { fg = "cyan" }
 "diagnostic.error" = { underline = { style = "curl", color = "red" } }
@@ -64,6 +73,7 @@ background_dark = "#21222c"
 foreground = "#f8f8f2"
 ruler = "#303030"
 comment = "#a4b5ed"
+inlay = "#828799"
 red = "#ff5555"
 orange = "#ffb86c"
 yellow = "#f1fa8c"
