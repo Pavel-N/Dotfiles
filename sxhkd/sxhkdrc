@@ -47,6 +47,11 @@ super + b
 super + shift + @space
 	~/.config/Scripts/change_layout
 
+# Open emoji keyboard
+#super + m
+#	emoji-keyboard
+
+
 ; +================\
 ; |    Controls    |
 ; +================/
@@ -68,7 +73,7 @@ XF86MonBrightnessDown
 
 # Lock
 XF86PowerOff
-	~/Programming/Rust/rlock_xcb/target/debug/rlock  
+	~/Programming/Rust/rpower/target/debug/rpower
 
 # Sleep
 XF86Sleep
@@ -118,7 +123,7 @@ super + {_,shift + }{Left, Down, Up, Right}
 	bspc {node,desktop} -f last
 
 # Focus or send to the given desktop
-super + {_, shift}{plus, ecaron, scaron, ccaron, rcaron, zcaron, yacute, aacute, iacute, eacute}
+super + {_, shift} + {plus, ecaron, scaron, ccaron, rcaron, zcaron, yacute, aacute, iacute, eacute}
 	bspc {desktop -f,node -d} '^{1-9}'
 # Fix "+" becoming "1" when shift is used
 super + shift + plus
