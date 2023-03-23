@@ -73,7 +73,7 @@ XF86MonBrightnessDown
 
 # Lock
 XF86PowerOff
-	~/Programming/Rust/rpower/target/debug/rpower
+	rpower
 
 # Sleep
 XF86Sleep
