@@ -14,19 +14,22 @@ cmp.setup {
   mapping = {
     ["<C-u>"] = cmp.mapping.scroll_docs(-4),
     ["<C-d>"] = cmp.mapping.scroll_docs(4),
-    ["<C-e>"] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Esc>'] = cmp.mapping.close(),
+    ["<C-q>"] = cmp.mapping.abort(),
+    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    -- On exit go to normal mode - do not just close the completions
+    ["<Esc>"] = function()
+        vim.cmd("stopinsert")
+    end,
 
-    -- Selecting completions with Tab
-    ["<Tab>"] = function(fallback)
+    -- Selecting completionsi
+    ["<C-j>"] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       else
         fallback()
       end
     end,
-    ["<S-Tab>"] = function(fallback)
+    ["<C-k>"] = function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       else

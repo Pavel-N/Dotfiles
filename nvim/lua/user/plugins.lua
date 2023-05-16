@@ -70,6 +70,7 @@ return packer.startup(function(use)
         "neovim/nvim-lspconfig",                 -- Neovim LSP client
     }
 
+    -- Rust
     use "rust-lang/rust.vim"
     use 'simrat39/rust-tools.nvim'
 
@@ -92,11 +93,38 @@ return packer.startup(function(use)
             require('Comment').setup({
                 toggler = {
                     line = "<C-c>",
-                    block = "<A-c>",
+                    block = "<C-b>",
+                },
+                opleader = {
+                    line = "<C-c>",
+                    block = "<C-b>",
                 }
             })
         end
     }
+
+    -- Surround operations
+    -- use "kylechui/nvim-surround"
+
+    -- Plugin - Dashboard
+    use "glepnir/dashboard-nvim"
+
+    -- Key bindings popup
+    -- Lua
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup {
+            disable = {
+                buftypes = {},
+                filetypes = {},
+            }
+        }
+      end
+    }
+
 
     --use "deoplete-plugins/deoplete-clang"   -- C/C++ Autocomplete
     --use "hrsh7th/nvim-cmp"                  -- The completion plugin

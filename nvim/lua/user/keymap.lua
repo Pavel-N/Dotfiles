@@ -51,3 +51,6 @@ keymap("n", "<C-a>", "ggVG")
 
 -- Clear selection highlight
 keymap("n", "<CR>", ":noh<CR><CR>")
+
+-- Cycle active buffer
+keymap("n", "<S-Tab>", "<C-w><C-w>")
