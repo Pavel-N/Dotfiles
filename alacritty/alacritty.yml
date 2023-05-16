@@ -11,8 +11,8 @@ env:
 window:
     opacity: 0.4
     padding:
-        x: 15
-        y: 15
+        x: 10
+        y: 10
 
 
 key_bindings:
