@@ -19,7 +19,7 @@ sxhkd &
 # Start Picom
 killall picom
 while pgrep -x picom >/dev/null; do sleep 1; done
-picom --experimental-backend -b
+picom --experimental-backend -b -f
 
 # Monitor(s)
 is_external=$(xrandr --query | grep 'HDMI2')
@@ -71,3 +71,6 @@ bspc config presel_feedback_color "#202020"  # Color of the preselect feedback r
 # Monocle 
 bspc config borderless_monocle    false      # Monocle is not borderless
 bspc config gapless_monocle       false      # Monocle is not gappless
+
+# GHIDRA fix
+wmname compiz
