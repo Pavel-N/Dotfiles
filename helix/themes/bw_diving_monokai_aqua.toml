@@ -1,0 +1,38 @@
+inherits = "monokai"
+
+"keyword.control.import" = { fg = "cyan", modifiers = ["italic"] }
+"keyword.function" = { fg = "cyan", modifiers = ["italic"] }
+"keyword.storage.type" = { fg = "cyan", modifiers = ["italic"] }
+
+"namespace" = { fg = "text" }
+
+"type" = { fg = "type", modifiers = ["bold"] }
+
+"ui.background" = { fg = "foreground" }
+
+# Inlay type hints
+"ui.virtual.inlay-hint" = { fg = "inlay" }
+
+# Statusline
+"ui.statusline" = { fg = "foreground", bg = "background_dark" }
+"ui.statusline.inactive" = { fg = "comment", bg = "background_dark" }
+"ui.statusline.normal" = { fg = "background_dark", bg = "cyan" }
+"ui.statusline.insert" = { fg = "background_dark", bg = "green" }
+"ui.statusline.select" = { fg = "background_dark", bg = "purple" }
+
+
+"ui.virtual.ruler" = { bg = "ruler" }
+"ui.virtual.indent-guide" = { fg = "ruler" }
+"ui.window" = { fg = "foreground" }
+"ui.cursorline.primary" = { bg = "background_dark" }
+"ui.cursorline.secondary" = { bg = "background_dark" }
+
+[palette]
+cyan = "#66D9EF"
+type = "#66D9EF"
+inlay = "#828799"
+background_dark = "#21222c"
+green = "#50fa7b"
+purple = "#bd93f9"
+ruler = "#303030"
+
